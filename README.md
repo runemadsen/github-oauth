@@ -31,7 +31,7 @@ This is a simple example on how you would use the gem (here using sinatra routes
 The main route checks whether we have a token saved in the database. If not, it redirects to Github for the user to authorize the application.
 The user is then returned to the /oauth path (specificed via the callback_url in the Github application settings), get the token using the code parameter, and save the token in a session variable.
 
-You can specify the specific scope for the authenticating user:
+If needed you can specify a specific scope for the authenticating user:
 
     redirect GithubOAuth.authorize_url('github_client_id', 'github_client_secret', 'gist')
 
