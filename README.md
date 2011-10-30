@@ -1,5 +1,5 @@
-This is a simple gem that helps you authenticate via the Github API V3 using OAuth2
------------------------------------------------------------------------------------
+Installation
+------------
 
 To install the gem, simply run:
 
@@ -8,6 +8,9 @@ To install the gem, simply run:
 Or the bundler equivalent:
 
     bundle install 'github-oauth'
+
+Examples
+--------
 
 This is a simple example on how to use the gem (here using sinatra routes). The gem will use the "callback_url" from your Github application OAuth settings (in this case I set it to http://mysite.com/oauth).
 
