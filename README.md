@@ -31,4 +31,8 @@ This is a simple example on how to use the gem (here using sinatra routes). The 
       redirect '/'
     end
 
+You can specify the specific scope for the authenticating user:
+
+    redirect GithubOAuth.authorize_url('github_client_id', 'github_client_secret', 'gist')
+
 I'm planning on releasing my GithubAPI gem that takes this token and makes read/write operations to the Github API super simple.
