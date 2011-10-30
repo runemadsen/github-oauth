@@ -25,7 +25,8 @@ This is a simple example on how to use the gem (here using sinatra routes). The 
 
     # when the user comes back from the github authorization url
     get '/oauth' do
-      # save the token in a session. append this token to all calls to the github api
+      # this callback_url will get called with a "code" param.
+      # grab the token using this code param, and just append this token to all calls to the github api
       session[:access_token] = GithubOAuth.token('github_client_id', 'github_client_secret', params[:code])
       redirect '/'
     end
