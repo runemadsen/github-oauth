@@ -1,7 +1,7 @@
 This is a simple gem that helps you authenticate via the Github API V3 using OAuth2
 -----------------------------------------------------------------------------------
 
-This is a simple example on how to use this gem (using sinatra routes). The gem will use the "callback_url" from your Github application OAuth settings (in this case I set it to http://mysite.com/oauth).
+This is a simple example on how to use the gem (here using sinatra routes). The gem will use the "callback_url" from your Github application OAuth settings (in this case I set it to http://mysite.com/oauth).
 
     # when user lands on home page
     get '/' do
