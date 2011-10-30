@@ -1,5 +1,3 @@
-module Github
-  module Oauth
-    VERSION = "0.0.1"
-  end
+module GithubOAuth
+  VERSION = "0.0.1"
 end
