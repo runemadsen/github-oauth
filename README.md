@@ -13,20 +13,14 @@ This is a simple example on how to use the gem (here using sinatra routes). The 
 
     require 'github-oauth'    
 
-    # when user lands on home page
     get '/' do
-      # check if we already have a token
       unless session[:access_token]
-        # if not, redirect to the github authorication url
         redirect GithubOAuth.authorize_url('github_client_id', 'github_client_secret')
       end
       "You have authenticated"
     end
 
-    # when the user comes back from the github authorization url
     get '/oauth' do
-      # this callback_url will get called with a "code" param.
-      # grab the token using this code param, and just append this token to all calls to the github api
       session[:access_token] = GithubOAuth.token('github_client_id', 'github_client_secret', params[:code])
       redirect '/'
     end
