@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "github-oauth/version"
 
 Gem::Specification.new do |s|
   s.name        = "github-oauth"
@@ -20,5 +19,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  s.add_runtime_dependency "oauth2"
+  s.add_dependency "oauth2"
 end
